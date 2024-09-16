@@ -7,20 +7,20 @@ let vote4 = document.getElementById('black4');
 
 
 let voting = (event)=>{
-  let ans;
-    if(event.target.id == vote.id){
-       
-            vote.style.backgroundColor='blue'
-        } 
+    let hasVoted = false;
 
-    else if(event.target.id == vote2.id){
-       vote2.style.backgroundColor='blue'}
-    else if(event.target.id == vote3.id){
-            vote3.style.backgroundColor='blue'}
-    else if(event.target.id == vote4.id){
-            vote4.style.backgroundColor='blue'}
    
-    }
+      if (!hasVoted) {
+        event.target.style.backgroundColor = 'blue';
+        
+        hasVoted = true;
+        vote.removeEventListener('click', voting);
+        vote2.removeEventListener('click', voting);
+        vote3.removeEventListener('click', voting);
+        vote4.removeEventListener('click', voting);
+      }
+    };
+
 // let action = (event)=>{
 //     // Hide thank you message
 //    event.target.style.backgroundColor= 'white'
