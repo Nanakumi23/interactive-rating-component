@@ -6,12 +6,15 @@ let vote2 = document.getElementById('black2');
 let vote3 = document.getElementById('black3'); 
 let vote4 = document.getElementById('black4'); 
 let vote5 = document.getElementById('black5'); 
-
+let display = document.getElementById('score')
+let score; 
 
 let voting = (event)=>{
     let hasVoted = false;
       if (!hasVoted) {
         event.target.style.backgroundColor = 'blue';
+        score = event.target.innerHTML; 
+        display.textContent= score;
         
         hasVoted = true;
         vote.removeEventListener('click', voting);
@@ -19,7 +22,8 @@ let voting = (event)=>{
         vote3.removeEventListener('click', voting);
         vote4.removeEventListener('click', voting);
         vote5.removeEventListener('click', voting);
-        message.style.display='none'
+        
+       
       }
     };
 let undoColor = ()=>{
