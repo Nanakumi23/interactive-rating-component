@@ -1,4 +1,5 @@
 let button = document.getElementById('btn'); 
+let container = document.getElementById('vote-container'); 
 let message = document.getElementById('thankYou')
 let vote = document.getElementById('black'); 
 let vote2 = document.getElementById('black2'); 
@@ -18,6 +19,7 @@ let voting = (event)=>{
         vote3.removeEventListener('click', voting);
         vote4.removeEventListener('click', voting);
         vote5.removeEventListener('click', voting);
+        message.style.display='none'
       }
     };
 let undoColor = ()=>{
@@ -32,6 +34,8 @@ let undoColor = ()=>{
  vote3.addEventListener('click',voting);
  vote4.addEventListener('click',voting);
  vote5.addEventListener('click',voting);
+ message.style.display='block'
+  container.style.display='none'
 }
 
 
@@ -41,5 +45,6 @@ let undoColor = ()=>{
  vote3.addEventListener('click',voting);
  vote4.addEventListener('click',voting);
  vote5.addEventListener('click',voting);
+ 
 
  button.addEventListener('click', undoColor);

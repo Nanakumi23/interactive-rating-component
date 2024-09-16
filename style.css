@@ -1,11 +1,32 @@
-.thankYou{
+body{
+    border: solid red 1px;
+}
+
+#thankYou{
     border: solid red 1px;
     width: 400px;
     display: none;
 }
 
-#black, #black2, #black3, #black4{
-   width: 100px;
+#black, #black2, #black3, #black4, #black5{
+   width: 30px;
    border: solid red 1px;
+   height: 30px;
+   border-radius: 45%;
+   display: flex;
+   justify-content: center; /* Horizontal centering */
+      align-items: center;  
 }
 
+
+#black:hover, #black2:hover, #black3:hover, #black4:hover, #black5:hover{
+   background-color: orange;
+}
+#vote-container{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 100px;
+    border: solid red 1px;
+    justify-content: space-around;
+}
