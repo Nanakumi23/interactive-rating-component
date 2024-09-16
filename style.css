@@ -1,4 +1,11 @@
 .thankYou{
     border: solid red 1px;
     width: 400px;
+    display: none;
 }
+
+#black, #black2, #black3, #black4{
+   width: 100px;
+   border: solid red 1px;
+}
+
