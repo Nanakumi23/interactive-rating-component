@@ -6,7 +6,9 @@ let vote2 = document.getElementById('black2');
 let vote3 = document.getElementById('black3'); 
 let vote4 = document.getElementById('black4'); 
 let vote5 = document.getElementById('black5'); 
-let display = document.getElementById('score')
+let display = document.getElementById('score');
+let hideTitle = document.getElementById('title');
+let hidePara = document.getElementById('para');
 let score; 
 
 let voting = (event)=>{
@@ -38,8 +40,11 @@ let undoColor = ()=>{
  vote3.addEventListener('click',voting);
  vote4.addEventListener('click',voting);
  vote5.addEventListener('click',voting);
- message.style.display='block'
-  container.style.display='none'
+ message.style.display='block';
+  container.style.display='none';
+  hideTitle.style.display='none';
+  hidePara.style.display='none';
+  button.style.display='none';
 }
 
 
